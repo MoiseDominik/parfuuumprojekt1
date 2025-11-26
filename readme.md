@@ -1,4 +1,4 @@
 Parfüm Projekt
 
 Csapatfelelős: Gera Ronaldó
-Tagok: Gera Ronaldo, Kiss Attila, Csúzli Dominik Kornél
+Tagok: Gera Ronaldo Messi, Kiss Attila Sándor, Moise Dominik Kornél
