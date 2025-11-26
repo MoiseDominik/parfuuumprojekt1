@@ -56,7 +56,7 @@ body {
     }
 }
 .card-body{
-    background: linear-gradient(135deg, #c300ff 0%, #fad0c4 100%);
+    background-color: #ffffff;
 }
 
 footer{
@@ -72,3 +72,5 @@ header{
         background-color: #333;
         color: #ffffff;
 }
+
+
