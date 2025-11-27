@@ -56,7 +56,7 @@ body {
     }
 }
 .card-body{
-    background: linear-gradient(135deg, #c300ff 0%, #fad0c4 100%);
+    background-color: #ffffff;
 }
 
 footer{
@@ -72,4 +72,21 @@ header{
         background-color: #333;
         color: #ffffff;
 }
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+    
+.div1 {
+    grid-column: span 2 / span 2;
+    grid-row: span 5 / span 5;
+    grid-column-start: 2;
+}
 
+.div4 {
+    grid-column: span 3 / span 3;
+    grid-row: span 5 / span 5;
+    grid-column-start: 4;
+}
