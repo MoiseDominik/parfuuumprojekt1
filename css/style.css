@@ -1,11 +1,11 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffffff ;
+    background-color: #cbdfff ;
     color: #333;
 }
 
 .hero-section {
-    background: linear-gradient(135deg, #c300ff 0%, #fad0c4 100%);
+    background: linear-gradient(135deg, #3d7cff 0%, #9addfe 100%);
     padding: 3rem;
     border-radius: 15px;
     color: white;
@@ -60,7 +60,8 @@ body {
 }
 
 footer{
-    background-color: #333;
+    background-color: #304c77;
+
 }
 
 .logo{
@@ -69,12 +70,15 @@ footer{
 }
 
 header{
-        background-color: #333;
+        background-color: #233b5c;
         color: #ffffff;
 }
 .szin {
 
-    background: #fad0c4 100%;
+    background: #d6e6f5 100%;
+}
+.szin2{
+    background-color: #e3f3fe;
 }
 
 .parent {
