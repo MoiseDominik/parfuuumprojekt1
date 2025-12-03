@@ -17,6 +17,30 @@
             includeHtml('header');
         </script>
     </header>
+                        <p id="countdown-1" class="reklamsav"></p>
+<script>
+                        const discountEnd_1 = new Date("2025-12-08T23:59:59").getTime();
+
+                        const interval_1 = setInterval(function () {
+                            const now = new Date().getTime();
+                            const distance = discountEnd_1 - now;
+
+                            if (distance < 0) {
+                                clearInterval(interval_1);
+                                document.getElementById("countdown-1").innerHTML =
+                                    "A kedvezmény lejárt ❌";
+                                return;
+                            }
+
+                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                            document.getElementById("countdown-1").innerHTML =
+                                `10% kedvezmény🎉: <strong>${days} nap ${hours} óra ${minutes} perc ${seconds} mp</strong>`;
+                        }, 1000);
+                    </script>
 
     <main class="container py-5">
         <h1 class="text-center mb-5">Termékeink</h1>
@@ -24,8 +48,9 @@
         <div class="row">
 
             <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <img src="img/jeanpaul.png" card-img-top" alt="Parfüm 1">
+                <div class="card h-100 countdown">
+                    
+                    <img src="img/jeanpaul.png" class="card-img-top" alt="Parfüm 1">
                     <div class="card-body">
                         <h5 class="card-title">Jean Paul Le Beau Le Parfum</h5>
                         <p class="text-muted">Férfi parfüm</p>
@@ -41,13 +66,13 @@
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
-                    <img src="img/emporio.png" card-img-top" alt="Parfüm 1">
+                    <img src="img/emporio.png " class="card-img-top" alt="Parfüm 1">
                     <div class="card-body">
                         <h5 class="card-title">ArmaniEmporio Stronger With You Eau de Toilette </h5>
                         <p class="text-muted">Férfi parfüm</p>
                         <p class="card-text"></p>
                         <div class="d-flex justify-content-between align-items-center">
-                            
+
                             <span class="price">43.990 Ft</span>
                             <button class="btn btn-sm btn-danger">Kosárba</button>
                         </div>
@@ -62,7 +87,7 @@
                         <p class="text-muted">Férfi parfüm</p>
                         <p class="card-text"></p>
                         <div class="d-flex justify-content-between align-items-center">
-                            
+
                             <span class="price">30.190 Ft</span>
                             <button class="btn btn-sm btn-danger">Kosárba</button>
                         </div>
@@ -77,7 +102,7 @@
                         <p class="text-muted">Férfi parfüm</p>
                         <p class="card-text"></p>
                         <div class="d-flex justify-content-between align-items-center">
-                            
+
                             <span class="price">30.080 Ft</span>
                             <button class="btn btn-sm btn-danger">Kosárba</button>
                         </div>
@@ -92,7 +117,7 @@
                         <p class="text-muted">Férfi parfüm</p>
                         <p class="card-text"></p>
                         <div class="d-flex justify-content-between align-items-center">
-                            
+
                             <span class="price">43.705 Ft</span>
                             <button class="btn btn-sm btn-danger">Kosárba</button>
                         </div>
@@ -107,7 +132,7 @@
                         <p class="text-muted">Férfi parfüm</p>
                         <p class="card-text"></p>
                         <div class="d-flex justify-content-between align-items-center">
-                            
+
                             <span class="price">52.760 Ft</span>
                             <button class="btn btn-sm btn-danger">Kosárba</button>
                         </div>
@@ -122,7 +147,7 @@
                         <p class="text-muted">Férfi parfüm</p>
                         <p class="card-text"></p>
                         <div class="d-flex justify-content-between align-items-center">
-                            
+
                             <span class="price">36.390 Ft</span>
                             <button class="btn btn-sm btn-danger">Kosárba</button>
                         </div>
@@ -139,7 +164,7 @@
                         <p class="text-muted">Férfi parfüm</p>
                         <p class="card-text"></p>
                         <div class="d-flex justify-content-between align-items-center">
-                            
+
                             <span class="price">47.490 Ft</span>
                             <button class="btn btn-sm btn-danger">Kosárba</button>
                         </div>
@@ -156,7 +181,7 @@
                         <p class="text-muted">Férfi parfüm</p>
                         <p class="card-text"></p>
                         <div class="d-flex justify-content-between align-items-center">
-                            
+
                             <span class="price">41.890 Ft</span>
                             <button class="btn btn-sm btn-danger">Kosárba</button>
                         </div>
@@ -167,16 +192,16 @@
 
         </div>
 
+</main>
+        <footer>
+            <script>
+                includeHtml('footer');
+            </script>
+        </footer>
 
-    <footer>
-        <script>
-            includeHtml('footer');
-        </script>
-    </footer>
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
