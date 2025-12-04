@@ -18,6 +18,30 @@
         </script>
 
     </header>
+                            <p id="countdown-1" class="reklamsav"></p>
+<script>
+                        const discountEnd_1 = new Date("2025-12-08T23:59:59").getTime();
+
+                        const interval_1 = setInterval(function () {
+                            const now = new Date().getTime();
+                            const distance = discountEnd_1 - now;
+
+                            if (distance < 0) {
+                                clearInterval(interval_1);
+                                document.getElementById("countdown-1").innerHTML =
+                                    "A kedvezmény lejárt ❌";
+                                return;
+                            }
+
+                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                            document.getElementById("countdown-1").innerHTML =
+                                `10% kedvezmény🎉: <strong>${days} nap ${hours} óra ${minutes} perc ${seconds} mp</strong>`;
+                        }, 1000);
+                    </script>
     <main class="container py-5 ">
         <section class="hero-section text-center mb-5">
             <h1 class="display-4 fw-bold ">Férfi Illataink</h1>
