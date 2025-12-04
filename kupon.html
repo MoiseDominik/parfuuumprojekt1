@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kupon beváltása</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <script src="./js/app.js"></script>
+    <header>
+        <script>
+            includeHtml('header');
+        </script>
+
+    </header>
+    <div class="coupon-container">
+        <h1>🎟️ Kupon beváltása</h1>
+        <p class="subtitle">Írd be a kuponkódodat és nézd meg mit kapsz!</p>
+
+        <div class="coupon-box">
+            <input type="text" id="couponInput" placeholder="Írd be a kuponkódot...">
+            <button onclick="validateCoupon()">Beváltás</button>
+        </div>
+
+        <div id="couponResult" class="result"></div>
+    </div>
+
+    <script>
+        function validateCoupon() {
+            const input = document.getElementById("couponInput").value.trim();
+            const result = document.getElementById("couponResult");
+
+            const coupons = {
+                "FASZA10": "10% kedvezmény jár! 🔥",
+                "INGYEN": "Ingyenes kiszállítás aktiválva! 🚚",
+                "VIP2025": "VIP kedvezmény: 25% off! ⭐"
+            };
+
+            if (coupons[input]) {
+                result.textContent = coupons[input];
+                result.classList.add("success");
+                result.classList.remove("error");
+            } else {
+                result.textContent = "Érvénytelen kuponkód! ❌";
+                result.classList.add("error");
+                result.classList.remove("success");
+            }
+        }
+    </script>
+    <section class="py-5 szin text-black">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <h2 class="mb-4">Subscribe to Our Newsletter</h2>
+                    <p class="mb-4">Get exclusive offers, new product announcements, and fragrance tips delivered to
+                        your inbox.</p>
+                    <form class="row g-2 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control" placeholder="Your email address" required>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-light text-pink-700 w-100"
+                                onclick="uzenet()">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <script>
+            includeHtml('footer');
+        </script>
+    </footer>
+</body>
+
+</html>
