@@ -209,3 +209,6 @@ body {
 .error {
     color: #c0392b;
 }
+.s{
+    background: linear-gradient(135deg, #9900ff 0%, #9addfe 100%);
+}
