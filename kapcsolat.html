@@ -41,6 +41,11 @@
     <main class="container py-5">
         <h1 class="text-center mb-5">Kapcsolat</h1>
         
+        <script>
+            function uzenetkuldes(){
+                alert("Üzenet elküldve")
+            }
+        </script>
         <div class="row">
             <div class="col-lg-6 mb-4">
                 <div class="contact-card p-4 h-100">
@@ -58,7 +63,7 @@
                             <label for="message" class="form-label">Üzenet</label>
                             <textarea class="form-control" id="message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Küldés</button>
+                        <button type="submit" class="btn btn-primary" onclick="uzenetkuldes()">Küldés</button>
                     </form>
                 </div>
             </div>
