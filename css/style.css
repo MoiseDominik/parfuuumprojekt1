@@ -5,7 +5,7 @@ body {
 }
 
 .hero-section {
-    background: linear-gradient(135deg, #3d7cff 0%, #9addfe 100%);
+    background: linear-gradient(135deg, #a200ff 0%, #9addfe 100%);
     padding: 3rem;
     border-radius: 15px;
     color: white;
@@ -60,7 +60,7 @@ body {
 }
 
 footer{
-    background-color: #304c77;
+   background: linear-gradient(135deg, #9900ff 0%, #9addfe 100%);
 
 }
 
@@ -70,7 +70,7 @@ footer{
 }
 
 header{
-        background-color: #233b5c;
+     background: linear-gradient(135deg, #9900ff 0%, #9addfe 100%);
         color: #ffffff;
 }
 .szin {
@@ -107,15 +107,15 @@ header{
 
 .reklamsav{
     width: 100%;
-    background: #bc4b4b;
-    border:4px solid #c14646;
+     background: linear-gradient(135deg, #9900ff 0%, #9addfe 100%);
+    border:6px solid#001aff 100%;
     text-align: center;
     padding: 5px 0px 5px 0px;
 }
 
 /* --- Navbar --- */
 .navbar {
-    background: #304c77;
+    background: linear-gradient(135deg, #9900ff 0%, #9addfe 100%);
     color: white;
     padding: 15px 40px;
     display: flex;
