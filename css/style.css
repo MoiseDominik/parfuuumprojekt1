@@ -107,7 +107,7 @@ header{
 
 .reklamsav{
     width: 100%;
-     background: linear-gradient(135deg, #9900ff 0%, #9addfe 100%);
+     background: rgb(218, 114, 114);
     border:6px solid#001aff 100%;
     text-align: center;
     padding: 5px 0px 5px 0px;
@@ -121,23 +121,31 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
-.nav-links {
+.nav-link {
     list-style: none;
     display: flex;
     gap: 30px;
-}
+    transition: all 0.3s !important;
 
-.nav-links a {
-    color: white;
+}  
+.nav-link a {
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s;
+
 }
 
-.nav-links a:hover {
+a:hover{
+    transform: translateY(-3px);
+    color: #ffffff !important;
+}
+
+.nav-link  {
     color: #f39c12;
+    
 }
 
 /* --- Kupon oldal design --- */
@@ -212,3 +220,20 @@ body {
 .s{
     background: linear-gradient(135deg, #9900ff 0%, #9addfe 100%);
 }
+
+  .snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 1em;
+    pointer-events: none;
+    user-select: none;
+    animation: fall linear infinite;
+  }
+
+  @keyframes fall {
+    to {
+      transform: translateY(100vh);
+      opacity: 0.3;
+    }
+  }

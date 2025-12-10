@@ -12,43 +12,70 @@
 
 <body class="szin2 ">
     <script src="./js/app.js"></script>
+    <!-- Javascript -->
     <header>
         <script>
             includeHtml('header');
         </script>
 
     </header>
-                            <p id="countdown-1" class="reklamsav"></p>
-<script>
-                        const discountEnd_1 = new Date("2025-12-08T23:59:59").getTime();
+    <!-- sigma-hoeses-javascript -->
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement("div");
+            snowflake.classList.add("snowflake");
+            snowflake.innerHTML = "❄";
 
-                        const interval_1 = setInterval(function () {
-                            const now = new Date().getTime();
-                            const distance = discountEnd_1 - now;
+            snowflake.style.left = Math.random() * window.innerWidth + "px";
+            snowflake.style.fontSize = (Math.random() * 10 + 10) + "px";
 
-                            if (distance < 0) {
-                                clearInterval(interval_1);
-                                document.getElementById("countdown-1").innerHTML =
-                                    "A kedvezmény lejárt ❌";
-                                return;
-                            }
 
-                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            const duration = Math.random() * 5 + 3;
+            snowflake.style.animationDuration = duration + "s";
 
-                            document.getElementById("countdown-1").innerHTML =
-                                `10% kedvezmény🎉: <strong>${days} nap ${hours} óra ${minutes} perc ${seconds} mp</strong>`;
-                        }, 1000);
-                    </script>
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, duration * 1000);
+        }
+
+
+        setInterval(createSnowflake, 150);
+    </script>
+
+    <!-- Javascript -->
+    <p id="countdown-1" class="reklamsav"></p>
+    <script>
+        const discountEnd_1 = new Date("2025-12-13T23:59:59").getTime();
+
+        const interval_1 = setInterval(function () {
+            const now = new Date().getTime();
+            const distance = discountEnd_1 - now;
+
+            if (distance < 0) {
+                clearInterval(interval_1);
+                document.getElementById("countdown-1").innerHTML =
+                    "A kedvezmény lejárt ❌";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown-1").innerHTML =
+                `67% kedvezmény🎉: <strong>${days} nap ${hours} óra ${minutes} perc ${seconds} mp</strong>`;
+        }, 1000);
+    </script>
     <main class="container py-5 ">
         <section class="hero-section text-center mb-5">
             <h1 class="display-4 fw-bold ">Férfi Illataink</h1>
             <p class="lead">Fedezd fel exkluzív parfümjeink világát, exkluzív áron!</p>
             <a href="termekek.html" class="btn btn-primary btn-lg mt-3">Termékeink</a>
         </section>
-        
+
         <section class="featured-products mb-5">
             <h2 class="text-center mb-4">Kiemelt termékek, népszerű termékeink</h2>
             <div class="row">
@@ -90,11 +117,11 @@
                 </div>
             </div>
         </section>
-
+        <!-- Javascript -->
         <script>
             function uzenet() {
 
-                    alert("Köszönjük hogy feliratkozott a hírlevelünkre😊")
+                alert("Köszönjük hogy feliratkozott a hírlevelünkre😊")
 
             }  
         </script>
@@ -105,7 +132,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center">
                     <h2 class="mb-4">Iratkozz fel hírlevelünkre</h2>
-                    <p class="mb-4">Exkluzív ajánlatok, új termékbejelentések és illattippeket kaphatsz közvetlenül az e-mail fiókodba.</p>
+                    <p class="mb-4">Exkluzív ajánlatok, új termékbejelentések és illattippeket kaphatsz közvetlenül az
+                        e-mail fiókodba.</p>
                     <form class="row g-2 justify-content-center">
                         <div class="col-md-8">
                             <input type="email" class="form-control" placeholder="Your email address" required>
