@@ -118,13 +118,7 @@
             </div>
         </section>
         <!-- Javascript -->
-        <script>
-            function uzenet() {
 
-                alert("Köszönjük hogy feliratkozott a hírlevelünkre😊")
-
-            }  
-        </script>
 
     </main>
     <section class="py-5 szin text-black">
@@ -136,11 +130,11 @@
                         e-mail fiókodba.</p>
                     <form class="row g-2 justify-content-center">
                         <div class="col-md-8">
-                            <input type="email" class="form-control" placeholder="Your email address" required>
+                            <input type="email" class="form-control" placeholder="Your email address" required id="emailInput">
                         </div>
                         <div class="col-md-4">
-                            <button type="submit" class="btn btn-light text-pink-700 w-100"
-                                onclick="uzenet()">Subscribe</button>
+                            <button type="submit" class="btn btn-light text-pink-700 w-100" onclick="uzenet()"
+                                id="feliratkozas">Subscribe</button>
                         </div>
                     </form>
                 </div>
@@ -148,12 +142,37 @@
         </div>
     </section>
 
+        <script>
+            function uzenet() {
 
+
+                let emailInput = document.getElementById("email");
+                let gomb = document.getElementById("feliratkozas");
+
+                // Regex az e-mail ellenőrzéshez
+                //let emailMinta = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                let emailPattern = /^([a-z0-9_.+-])+\@(([a-z0-9-])+\.)+([a-z0-9]{2,4})+$/;
+                if (emailInput && gomb) {
+                    gomb.addEventListener("click", () => {
+                        emailInput.value = "";
+                        gomb.disabled = true;
+                        alert("Köszönjük hogy feliratkozott a hírlevelünkre😊")
+
+                        });
+                    }
+                    else {
+                            alert("Adja meg az érvényes e-mail címét")
+                        }
+
+
+
+                }  
+        </script>
 
 
     <footer>
         <script>
-            includeHtml('footer');
+                includeHtml('footer');
         </script>
     </footer>
 
